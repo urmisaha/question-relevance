@@ -1,6 +1,7 @@
 from stackapi import StackAPI
+import sys
 SITE = StackAPI('stackoverflow')
-tag = 'C++'
+tag = sys.argv[1]
 questions = SITE.fetch('questions', fromdate=1257136000, todate=1457222400, min=20, tagged=tag, sort='votes')
 f = open("questions.csv", "a+")
 # f.write("tag, link, other_tags\n")
