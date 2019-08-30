@@ -13,3 +13,6 @@ To extract questions for a particular tag, the tag should be provided as an argu
 If the tag arguement contains multiple words, the entire entry is split into separate words and questions which contain all of these words as their tags are fetched.
 
 The extracted questions are saved in the folder _extracted_questions_. A new file is generated with the name of the arguement provided by the user.
+
+The extracted questions are saved in a csv format with the following columns:
+> question_id, tag, link, tags
