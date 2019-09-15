@@ -1,0 +1,2 @@
+1. Questions are fetched with respect to input words from stackoverflow.
+2. Fetching the answers along with them, with max upvotes or a green tick

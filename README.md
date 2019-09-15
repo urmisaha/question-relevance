@@ -15,4 +15,4 @@ If the tag arguement contains multiple words, the entire entry is split into sep
 The extracted questions are saved in the folder _extracted_questions_. A new file is generated with the name of the arguement provided by the user.
 
 The extracted questions are saved in a csv format with the following columns:
-> question_id, tag, link, tags
+> question_id, tag, link, tags, accepted_answer
