@@ -1,24 +1,13 @@
-# import gensim.downloader as api
-
-# word_vectors = api.load("glove-wiki-gigaword-100")
-
-# sentence_obama = 'Obama speaks to the media in Illinois'.lower().split()
-# sentence_president = 'The president greets the press in Chicago'.lower().split()
-
-# similarity = word_vectors.wmdistance(sentence_obama, sentence_president)
-
-# print("gensim similarity:")
-# print(similarity)
-
-# Program to measure similarity between  
-# two sentences using cosine similarity. 
 from nltk.corpus import stopwords 
 from nltk.tokenize import word_tokenize 
   
 # X = input("Enter first string: ").lower() 
 # Y = input("Enter second string: ").lower() 
-X ="I love horror movies"
-Y ="Lights out is a horror movie"
+X ="What does it take to scale Django?".lower()
+Y ="Does Django scale?".lower()
+
+# X = "What is the most populous state in the USA?".lower()
+# Y = "Which state in the United States has the most people?".lower()
   
 # tokenization 
 X_list = word_tokenize(X)  
@@ -44,5 +33,7 @@ c = 0
 # cosine formula  
 for i in range(len(rvector)): 
         c+= l1[i]*l2[i] 
-cosine = c / float((sum(l1)*sum(l2))**0.5) 
+cosine = c / float((sum(l1)*sum(l2))**0.5)
+print(X) 
+print(Y) 
 print("similarity: ", cosine) 
