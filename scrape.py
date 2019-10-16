@@ -1,5 +1,6 @@
 from stackapi import StackAPI
 import sys
+import pymongo
 SITE = StackAPI('stackoverflow')
 tag = sys.argv[1]
 tags = tag.split()
@@ -20,8 +21,13 @@ f.write("question_id, tag, link, tags, accepted_answer\n")
 
 fetched_questions = []
 
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+db = client.stackapi
+collec_ques = db.questions
+
 for tag in tags:
 	questions = SITE.fetch('questions', fromdate=1257136000, todate=1457222400, min=20, tagged=tag, sort='votes', order='desc')
+	collec_ques.insert_many(questions['items'])
 	for q in questions['items']:
 		for t in tags:
 			if t in q['tags']:
