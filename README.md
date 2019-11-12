@@ -6,7 +6,7 @@
 
 > **Installation**: pip install -r requirements.txt 
 
-To extract questions for a particular tag, the tag should be provided as an argument to the file scrape.py
+To **extract** questions for a particular tag, the tag should be provided as an argument to the file scrape.py
 
 > Example: _python scrape.py c++_ will fetch questions with tag _c++_
 
@@ -52,3 +52,9 @@ The scraped data is stored in mongodb. An example is shown below to describe the
   "title": "Why is processing a sorted array faster than processing an unsorted array?"
 }
 ```
+
+To **fetch** questions related to an input query, the query should be provided as an argument to the file query.py
+
+> Example: _python query.py "what is c++"_ will fetch top voted questions with tag _c++_
+
+

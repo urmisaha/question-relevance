@@ -32,7 +32,7 @@ collec_ques = db.questions
 
 # fetch questions
 for t in rel_tags:
-    print(t)
+    print("\nFetching questions for tag: " + t + "\n")
     items = collec_ques.find({"tags": t}).limit(5)
 
     for item in items:
